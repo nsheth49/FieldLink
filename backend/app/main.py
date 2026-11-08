@@ -61,7 +61,11 @@ class TextMessage(Strict): text:str=Field(min_length=1,max_length=3000)
 @app.get('/api/health')
 def health(db=Depends(database)):
     db.execute(text('SELECT 1'))
-    return {'status':'ok','database':'local SQLite fallback' if engine.dialect.name=='sqlite' else 'PostgreSQL (Tiger usage unverified)','ai':{'mode':settings.ai_mode,'ready':bool(settings.nvidia_api_key) if settings.ai_mode!='mock' else True},'messaging':photon_status(),'simulation':True}
+    return {'status':'ok','database':'local SQLite fallback' if engine.dialect.name=='sqlite' else 'PostgreSQL (Tiger usage unverified)',
+            'ai':{'mode':settings.ai_mode,'ready':bool(settings.nvidia_api_key) if settings.ai_mode!='mock' else True,
+                  'configured':bool(settings.nvidia_api_key),'model':settings.nvidia_model,
+                  'detail':'Live mode; readiness indicates configuration, not current provider availability' if settings.ai_mode=='live' else 'Local mock; no NVIDIA request'},
+            'messaging':photon_status(),'simulation':True}
 
 @app.post('/api/auth/login')
 def login(body:Login,response:Response,db=Depends(database)):

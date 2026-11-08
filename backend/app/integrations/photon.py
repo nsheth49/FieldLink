@@ -3,7 +3,17 @@ import httpx
 from app.config import settings
 
 def status():
-    return {'mode':settings.messaging_mode,'ready':settings.messaging_mode=='mock','detail':'Local simulation; no message leaves this app' if settings.messaging_mode=='mock' else 'Live unverified; inbound signing and identity fixture required'}
+    fields={'PHOTON_API_KEY':settings.photon_api_key,'PHOTON_PROJECT_ID':settings.photon_project_id,
+            'PHOTON_SENDER_ID':settings.photon_sender_id,'PHOTON_WEBHOOK_SECRET':settings.photon_webhook_secret}
+    missing=[key for key,value in fields.items() if not value]
+    issues=[]
+    if settings.photon_project_id and not settings.photon_project_id.startswith('pho_prj_'):
+        issues.append('Project ID is not a Photon Beta 2 project ID (pho_prj_...)')
+    if settings.photon_api_key and not settings.photon_api_key.startswith('pho_sk_'):
+        issues.append('Use a scoped Photon Beta 2 project API key (pho_sk_...)')
+    return {'mode':settings.messaging_mode,'ready':settings.messaging_mode=='mock',
+            'configured':not missing and not issues,'missing':missing,'issues':issues,'inbound_enabled':False,
+            'detail':'Local simulation; no message leaves this app' if settings.messaging_mode=='mock' else 'Live unverified; inbound signing and identity fixture required'}
 
 def send(payload,client=None):
     if settings.messaging_mode=='mock': return {'delivery':'mock','provider_id':None}

@@ -1,4 +1,5 @@
 from pathlib import Path
+from typing import Literal
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -9,8 +10,8 @@ class Settings(BaseSettings):
     session_secret: str = ''
     app_env: str = 'development'
     app_public_url: str = 'http://localhost:5173'
-    ai_mode: str = 'mock'
-    messaging_mode: str = 'mock'
+    ai_mode: Literal['mock', 'live'] = 'mock'
+    messaging_mode: Literal['mock', 'live'] = 'mock'
     nvidia_api_key: str = ''
     nvidia_api_base: str = 'https://integrate.api.nvidia.com/v1'
     nvidia_model: str = 'nvidia/nemotron-3.5-lightning-30b-a3b'

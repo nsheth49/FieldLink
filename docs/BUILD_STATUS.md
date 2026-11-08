@@ -22,11 +22,13 @@ Updated November 8, 2026. Local mock vertical slice works; the complete live spo
 
 Imported 196,755 readings / 105 assets. At snapshot now, detector shows three failures, two degradation events and one leak. Practice evaluation matched all 13 episodes with zero false alarms under declared overlap/onset rules; gradual-condition delays remain large. See EVALUATION.md.
 
-Final validation: 23 backend tests passed, including provider transport and worker recovery tests; 3 Vitest tests passed; TypeScript/Vite production build passed; pip check passed; migration rerun passed. One actual Playwright flow passed after the durable conversation refactor: snapshot → v1 → truck constraint → v2 → exact approval → acknowledgment at laptop width and mobile overflow. README records commands. Screenshots are ignored QA outputs. Vite reports a non-failing large-bundle warning.
+Latest validation: 27 backend tests passed, including strict live-adapter protocol, credential-safe provider diagnostics, worker recovery and authorization checks; 3 Vitest tests passed; TypeScript/Vite production build passed. Earlier pip check, migration rerun and one actual Playwright mock flow passed: snapshot → v1 → truck constraint → v2 → exact approval → acknowledgment at laptop width and mobile overflow. The browser flow has not been repeated against live NVIDIA. Vite retains a non-failing large-bundle warning.
+
+November 8 API follow-up: moved configured values from the tracked example into ignored .env, restored the example, generated SESSION_SECRET and verified NVIDIA through a real two-round tool/result exchange plus actual bounded adapter calling compare_response_plans with synthetic tools. Corrected strict tool schema compatibility and disabled thinking to fit the bounded token output. AI_MODE=live locally; messaging stays mock. No external message was sent.
 
 ## Remaining blockers and gaps
 
-- [ ] NVIDIA credentials and real tool-call smoke test; no NVIDIA qualification claim.
+- [x] NVIDIA credentials and real tool-call smoke test, including bounded adapter check. Complete NVIDIA/Photon workflow and prize qualification still unverified.
 - [ ] Photon project/channel, verified tester identities, complete signature/freshness contract and real sanitized fixture. Outbound Beta plain-text adapter is mock-transport tested only; public webhook mutations return 503. No live round trip or Photon qualification claim.
 - [ ] Tiger Cloud credentials, TLS, PostgreSQL/Timescale migration and locking smoke tests. SQLite does not qualify.
 - [ ] Python 3.12 unavailable locally; lock resolved on 3.13, Node 24.14.1. Docker targets 3.12; Linux/Compose compatibility untested.

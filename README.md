@@ -2,7 +2,7 @@
 
 Field operations prototype: validated EOG recordings → causal incidents → deterministic shared-fleet plans → operator constraints → exact supervisor approval → simulated dispatch and acknowledgment.
 
-**Local mock workflow implemented. Live NVIDIA, Photon, Tiger Cloud and Vultr are unverified.** See [build status](docs/BUILD_STATUS.md), [provider contracts](docs/PROVIDER_CONTRACTS.md), [evaluation](docs/EVALUATION.md), and [demo/runbook](docs/DEMO.md).
+**Local workflow implemented; live NVIDIA tool calling verified. Photon, Tiger Cloud and Vultr remain unverified.** The example defaults to mock providers; the configured local .env now uses live NVIDIA and mock messaging. See [build status](docs/BUILD_STATUS.md), [provider contracts](docs/PROVIDER_CONTRACTS.md), [evaluation](docs/EVALUATION.md), and [demo/runbook](docs/DEMO.md).
 
 ## Setup on Windows
 
@@ -61,7 +61,17 @@ npm --prefix frontend run test:e2e
 
 Playwright uses installed Edge by default; set FIELDLINK_BROWSER_CHANNEL=chromium if that browser is installed instead. Unit tests use temporary databases and mock HTTP transports. The evaluator in eval/ is isolated from runtime and is the only evaluation code that reads answer keys.
 
-Verified locally: 23 backend tests, 3 frontend tests, one full browser scenario including mobile overflow, production build, pip dependency check, and repeatable migration. The build reports a large-bundle warning. Docker and live provider checks remain pending.
+Verified locally: 27 backend tests, 3 frontend tests, one full mock browser scenario including mobile overflow, production build, pip dependency check, and repeatable migration. The NVIDIA key, tool-result round trip and bounded adapter have also passed real synthetic checks. The build reports a large-bundle warning. Docker, Photon and Tiger checks remain pending.
+
+Put real keys in ignored root `.env`, never `.env.example`. Restart API and worker after changing configuration. Check missing configuration without displaying secrets:
+
+```powershell
+backend/.venv/Scripts/python.exe scripts/check_integrations.py
+# Explicit NVIDIA-only live diagnostic, using synthetic data and no messaging:
+backend/.venv/Scripts/python.exe scripts/check_integrations.py --live-nvidia --runtime-agent --output .runtime/provider-checks.json
+```
+
+Photon needs a Beta 2 project ID (`pho_prj_...`), scoped API key (`pho_sk_...`), sender ID, signing secret, verified conversation/role mappings, and a public HTTPS webhook. The separate `fieldlink/` Spectrum starter does not provide these Beta credentials. Tiger Cloud requires a TLS PostgreSQL DATABASE_URL; SQLite remains the development fallback.
 
 Plans report **least cost found**, with bounded minute-grid search. They are not proven globally optimal. Original telemetry is immutable; tools only read through the run cursor. Separate simulated traces represent proposed actions.
 
