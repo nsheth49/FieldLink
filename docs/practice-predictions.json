@@ -1,0 +1,708 @@
+[
+  {
+    "event_id": "S1_FACILITY_B-pump_failure-1791339000",
+    "system_id": "S1",
+    "facility_id": "S1_FACILITY_B",
+    "asset_id": "S1_PUMP_B",
+    "category": "pump_failure",
+    "status": "resolved",
+    "onset_unix": 1791339000.0,
+    "detection_unix": 1791339000.0,
+    "end_unix": 1791360600.0,
+    "provisional": false,
+    "confidence": 0.98,
+    "evidence": [
+      {
+        "asset_id": "S1_PIPELINE_B",
+        "metric": "pressure_psi",
+        "value": 1046.8,
+        "ts": 1791339000.0
+      },
+      {
+        "asset_id": "S1_PIPELINE_B",
+        "metric": "receive_flow_bpd",
+        "value": 0.0,
+        "ts": 1791339000.0
+      },
+      {
+        "asset_id": "S1_PUMP_B",
+        "metric": "discharge_psi",
+        "value": 1052.1,
+        "ts": 1791339000.0
+      },
+      {
+        "asset_id": "S1_PUMP_B",
+        "metric": "flow_bpd",
+        "value": 0.0,
+        "ts": 1791339000.0
+      },
+      {
+        "asset_id": "S1_PUMP_B",
+        "metric": "status",
+        "value": 2.0,
+        "ts": 1791339000.0
+      },
+      {
+        "asset_id": "S1_TANK_B",
+        "metric": "level_pct",
+        "value": 34.86,
+        "ts": 1791339000.0
+      }
+    ],
+    "confirmed_unix": 1791339000.0
+  },
+  {
+    "event_id": "S1_FACILITY_C-pump_degradation-1791340200",
+    "system_id": "S1",
+    "facility_id": "S1_FACILITY_C",
+    "asset_id": "S1_PUMP_C",
+    "category": "pump_degradation",
+    "status": "resolved",
+    "onset_unix": 1791340200.0,
+    "detection_unix": 1791340200.0,
+    "end_unix": 1791440700.0,
+    "provisional": false,
+    "confidence": 0.85,
+    "evidence": [
+      {
+        "asset_id": "S1_PIPELINE_C",
+        "metric": "pressure_psi",
+        "value": 1103.6,
+        "ts": 1791340200.0
+      },
+      {
+        "asset_id": "S1_PIPELINE_C",
+        "metric": "receive_flow_bpd",
+        "value": 2561.7,
+        "ts": 1791340200.0
+      },
+      {
+        "asset_id": "S1_PUMP_C",
+        "metric": "discharge_psi",
+        "value": 1175.8,
+        "ts": 1791340200.0
+      },
+      {
+        "asset_id": "S1_PUMP_C",
+        "metric": "flow_bpd",
+        "value": 2532.0,
+        "ts": 1791340200.0
+      },
+      {
+        "asset_id": "S1_PUMP_C",
+        "metric": "status",
+        "value": 1.0,
+        "ts": 1791340200.0
+      },
+      {
+        "asset_id": "S1_TANK_C",
+        "metric": "level_pct",
+        "value": 67.82,
+        "ts": 1791340200.0
+      }
+    ],
+    "confirmed_unix": 1791343800.0
+  },
+  {
+    "event_id": "S1_FACILITY_C-pump_failure-1791418800",
+    "system_id": "S1",
+    "facility_id": "S1_FACILITY_C",
+    "asset_id": "S1_PUMP_C",
+    "category": "pump_failure",
+    "status": "resolved",
+    "onset_unix": 1791418800.0,
+    "detection_unix": 1791418800.0,
+    "end_unix": 1791440400.0,
+    "provisional": false,
+    "confidence": 0.98,
+    "evidence": [
+      {
+        "asset_id": "S1_PIPELINE_C",
+        "metric": "pressure_psi",
+        "value": 1049.7,
+        "ts": 1791418800.0
+      },
+      {
+        "asset_id": "S1_PIPELINE_C",
+        "metric": "receive_flow_bpd",
+        "value": 0.0,
+        "ts": 1791418800.0
+      },
+      {
+        "asset_id": "S1_PUMP_C",
+        "metric": "discharge_psi",
+        "value": 1049.5,
+        "ts": 1791418800.0
+      },
+      {
+        "asset_id": "S1_PUMP_C",
+        "metric": "flow_bpd",
+        "value": 0.0,
+        "ts": 1791418800.0
+      },
+      {
+        "asset_id": "S1_PUMP_C",
+        "metric": "status",
+        "value": 2.0,
+        "ts": 1791418800.0
+      },
+      {
+        "asset_id": "S1_TANK_C",
+        "metric": "level_pct",
+        "value": 49.93,
+        "ts": 1791418800.0
+      }
+    ],
+    "confirmed_unix": 1791418800.0
+  },
+  {
+    "event_id": "S2_FACILITY_A-pump_degradation-1791288600",
+    "system_id": "S2",
+    "facility_id": "S2_FACILITY_A",
+    "asset_id": "S2_PUMP_A",
+    "category": "pump_degradation",
+    "status": "resolved",
+    "onset_unix": 1791288600.0,
+    "detection_unix": 1791288600.0,
+    "end_unix": 1791317100.0,
+    "provisional": false,
+    "confidence": 0.85,
+    "evidence": [
+      {
+        "asset_id": "S2_PIPELINE_A",
+        "metric": "pressure_psi",
+        "value": 1053.8,
+        "ts": 1791288600.0
+      },
+      {
+        "asset_id": "S2_PIPELINE_A",
+        "metric": "receive_flow_bpd",
+        "value": 3083.5,
+        "ts": 1791288600.0
+      },
+      {
+        "asset_id": "S2_PUMP_A",
+        "metric": "discharge_psi",
+        "value": 1123.7,
+        "ts": 1791288600.0
+      },
+      {
+        "asset_id": "S2_PUMP_A",
+        "metric": "flow_bpd",
+        "value": 3087.9,
+        "ts": 1791288600.0
+      },
+      {
+        "asset_id": "S2_PUMP_A",
+        "metric": "status",
+        "value": 1.0,
+        "ts": 1791288600.0
+      },
+      {
+        "asset_id": "S2_TANK_A",
+        "metric": "level_pct",
+        "value": 68.79,
+        "ts": 1791288600.0
+      }
+    ],
+    "confirmed_unix": 1791290100.0
+  },
+  {
+    "event_id": "S2_FACILITY_A-pump_failure-1791453600",
+    "system_id": "S2",
+    "facility_id": "S2_FACILITY_A",
+    "asset_id": "S2_PUMP_A",
+    "category": "pump_failure",
+    "status": "ongoing",
+    "onset_unix": 1791453600.0,
+    "detection_unix": 1791453600.0,
+    "end_unix": null,
+    "provisional": false,
+    "confidence": 0.98,
+    "evidence": [
+      {
+        "asset_id": "S2_PIPELINE_A",
+        "metric": "pressure_psi",
+        "value": 1000.5,
+        "ts": 1791453600.0
+      },
+      {
+        "asset_id": "S2_PIPELINE_A",
+        "metric": "receive_flow_bpd",
+        "value": 0.0,
+        "ts": 1791453600.0
+      },
+      {
+        "asset_id": "S2_PUMP_A",
+        "metric": "discharge_psi",
+        "value": 1003.1,
+        "ts": 1791453600.0
+      },
+      {
+        "asset_id": "S2_PUMP_A",
+        "metric": "flow_bpd",
+        "value": 0.0,
+        "ts": 1791453600.0
+      },
+      {
+        "asset_id": "S2_PUMP_A",
+        "metric": "status",
+        "value": 2.0,
+        "ts": 1791453600.0
+      },
+      {
+        "asset_id": "S2_TANK_A",
+        "metric": "level_pct",
+        "value": 49.92,
+        "ts": 1791453600.0
+      }
+    ],
+    "confirmed_unix": 1791453600.0,
+    "level_pct": 68.18,
+    "hours_to_limit": 2.6136332464682477,
+    "forecast_reason": "Constant current net inflow estimate",
+    "revenue_per_hour": 3931.25,
+    "remaining_repair_hours": 4.0
+  },
+  {
+    "event_id": "S2_FACILITY_B-pump_failure-1791450000",
+    "system_id": "S2",
+    "facility_id": "S2_FACILITY_B",
+    "asset_id": "S2_PUMP_B",
+    "category": "pump_failure",
+    "status": "ongoing",
+    "onset_unix": 1791450000.0,
+    "detection_unix": 1791450000.0,
+    "end_unix": null,
+    "provisional": false,
+    "confidence": 0.98,
+    "evidence": [
+      {
+        "asset_id": "S2_PIPELINE_B",
+        "metric": "pressure_psi",
+        "value": 993.3,
+        "ts": 1791450000.0
+      },
+      {
+        "asset_id": "S2_PIPELINE_B",
+        "metric": "receive_flow_bpd",
+        "value": 0.0,
+        "ts": 1791450000.0
+      },
+      {
+        "asset_id": "S2_PUMP_B",
+        "metric": "discharge_psi",
+        "value": 999.7,
+        "ts": 1791450000.0
+      },
+      {
+        "asset_id": "S2_PUMP_B",
+        "metric": "flow_bpd",
+        "value": 0.0,
+        "ts": 1791450000.0
+      },
+      {
+        "asset_id": "S2_PUMP_B",
+        "metric": "status",
+        "value": 2.0,
+        "ts": 1791450000.0
+      },
+      {
+        "asset_id": "S2_TANK_B",
+        "metric": "level_pct",
+        "value": 50.01,
+        "ts": 1791450000.0
+      }
+    ],
+    "confirmed_unix": 1791450000.0,
+    "level_pct": 78.49,
+    "hours_to_limit": 1.424962330487193,
+    "forecast_reason": "Constant current net inflow estimate",
+    "revenue_per_hour": 2450.0,
+    "remaining_repair_hours": 3.0
+  },
+  {
+    "event_id": "S2_FACILITY_C-pump_failure-1791451800",
+    "system_id": "S2",
+    "facility_id": "S2_FACILITY_C",
+    "asset_id": "S2_PUMP_C",
+    "category": "pump_failure",
+    "status": "ongoing",
+    "onset_unix": 1791451800.0,
+    "detection_unix": 1791451800.0,
+    "end_unix": null,
+    "provisional": false,
+    "confidence": 0.98,
+    "evidence": [
+      {
+        "asset_id": "S2_PIPELINE_C",
+        "metric": "pressure_psi",
+        "value": 1000.8,
+        "ts": 1791451800.0
+      },
+      {
+        "asset_id": "S2_PIPELINE_C",
+        "metric": "receive_flow_bpd",
+        "value": 0.0,
+        "ts": 1791451800.0
+      },
+      {
+        "asset_id": "S2_PUMP_C",
+        "metric": "discharge_psi",
+        "value": 997.5,
+        "ts": 1791451800.0
+      },
+      {
+        "asset_id": "S2_PUMP_C",
+        "metric": "flow_bpd",
+        "value": 0.0,
+        "ts": 1791451800.0
+      },
+      {
+        "asset_id": "S2_PUMP_C",
+        "metric": "status",
+        "value": 2.0,
+        "ts": 1791451800.0
+      },
+      {
+        "asset_id": "S2_TANK_C",
+        "metric": "level_pct",
+        "value": 45.09,
+        "ts": 1791451800.0
+      }
+    ],
+    "confirmed_unix": 1791451800.0,
+    "level_pct": 69.47,
+    "hours_to_limit": 2.3256774193548386,
+    "forecast_reason": "Constant current net inflow estimate",
+    "revenue_per_hour": 2393.75,
+    "remaining_repair_hours": 3.5
+  },
+  {
+    "event_id": "S3_FACILITY_A-pump_degradation-1791408600",
+    "system_id": "S3",
+    "facility_id": "S3_FACILITY_A",
+    "asset_id": "S3_PUMP_A",
+    "category": "pump_degradation",
+    "status": "ongoing",
+    "onset_unix": 1791408600.0,
+    "detection_unix": 1791408600.0,
+    "end_unix": null,
+    "provisional": false,
+    "confidence": 0.85,
+    "evidence": [
+      {
+        "asset_id": "S3_PIPELINE_A",
+        "metric": "pressure_psi",
+        "value": 1004.5,
+        "ts": 1791408600.0
+      },
+      {
+        "asset_id": "S3_PIPELINE_A",
+        "metric": "receive_flow_bpd",
+        "value": 2836.9,
+        "ts": 1791408600.0
+      },
+      {
+        "asset_id": "S3_PUMP_A",
+        "metric": "discharge_psi",
+        "value": 1080.3,
+        "ts": 1791408600.0
+      },
+      {
+        "asset_id": "S3_PUMP_A",
+        "metric": "flow_bpd",
+        "value": 2842.0,
+        "ts": 1791408600.0
+      },
+      {
+        "asset_id": "S3_PUMP_A",
+        "metric": "status",
+        "value": 1.0,
+        "ts": 1791408600.0
+      },
+      {
+        "asset_id": "S3_TANK_A",
+        "metric": "level_pct",
+        "value": 63.91,
+        "ts": 1791408600.0
+      }
+    ],
+    "confirmed_unix": 1791411300.0,
+    "level_pct": 68.21,
+    "hours_to_limit": null,
+    "forecast_reason": "Field inspection; no shutdown countdown",
+    "revenue_per_hour": 3550.0,
+    "remaining_repair_hours": 0
+  },
+  {
+    "event_id": "S3_FACILITY_B-pipeline_leak-1791184800",
+    "system_id": "S3",
+    "facility_id": "S3_FACILITY_B",
+    "asset_id": "S3_PIPELINE_B",
+    "category": "pipeline_leak",
+    "status": "resolved",
+    "onset_unix": 1791184800.0,
+    "detection_unix": 1791184800.0,
+    "end_unix": 1791280800.0,
+    "provisional": false,
+    "confidence": 0.85,
+    "evidence": [
+      {
+        "asset_id": "S3_PIPELINE_B",
+        "metric": "pressure_psi",
+        "value": 982.7,
+        "ts": 1791184800.0
+      },
+      {
+        "asset_id": "S3_PIPELINE_B",
+        "metric": "receive_flow_bpd",
+        "value": 2181.6,
+        "ts": 1791184800.0
+      },
+      {
+        "asset_id": "S3_PUMP_B",
+        "metric": "discharge_psi",
+        "value": 1099.4,
+        "ts": 1791184800.0
+      },
+      {
+        "asset_id": "S3_PUMP_B",
+        "metric": "flow_bpd",
+        "value": 2251.4,
+        "ts": 1791184800.0
+      },
+      {
+        "asset_id": "S3_PUMP_B",
+        "metric": "status",
+        "value": 1.0,
+        "ts": 1791184800.0
+      },
+      {
+        "asset_id": "S3_TANK_B",
+        "metric": "level_pct",
+        "value": 68.58,
+        "ts": 1791184800.0
+      }
+    ],
+    "confirmed_unix": 1791188700.0
+  },
+  {
+    "event_id": "S4_FACILITY_A-pipeline_leak-1791262500",
+    "system_id": "S4",
+    "facility_id": "S4_FACILITY_A",
+    "asset_id": "S4_PIPELINE_A",
+    "category": "pipeline_leak",
+    "status": "resolved",
+    "onset_unix": 1791262500.0,
+    "detection_unix": 1791262500.0,
+    "end_unix": 1791352800.0,
+    "provisional": false,
+    "confidence": 0.85,
+    "evidence": [
+      {
+        "asset_id": "S4_PIPELINE_A",
+        "metric": "pressure_psi",
+        "value": 1124.5,
+        "ts": 1791262500.0
+      },
+      {
+        "asset_id": "S4_PIPELINE_A",
+        "metric": "receive_flow_bpd",
+        "value": 2622.2,
+        "ts": 1791262500.0
+      },
+      {
+        "asset_id": "S4_PUMP_A",
+        "metric": "discharge_psi",
+        "value": 1249.9,
+        "ts": 1791262500.0
+      },
+      {
+        "asset_id": "S4_PUMP_A",
+        "metric": "flow_bpd",
+        "value": 2714.6,
+        "ts": 1791262500.0
+      },
+      {
+        "asset_id": "S4_PUMP_A",
+        "metric": "status",
+        "value": 1.0,
+        "ts": 1791262500.0
+      },
+      {
+        "asset_id": "S4_TANK_A",
+        "metric": "level_pct",
+        "value": 31.97,
+        "ts": 1791262500.0
+      }
+    ],
+    "confirmed_unix": 1791280500.0
+  },
+  {
+    "event_id": "S4_FACILITY_C-pump_degradation-1791438900",
+    "system_id": "S4",
+    "facility_id": "S4_FACILITY_C",
+    "asset_id": "S4_PUMP_C",
+    "category": "pump_degradation",
+    "status": "ongoing",
+    "onset_unix": 1791438900.0,
+    "detection_unix": 1791438900.0,
+    "end_unix": null,
+    "provisional": false,
+    "confidence": 0.85,
+    "evidence": [
+      {
+        "asset_id": "S4_PIPELINE_C",
+        "metric": "pressure_psi",
+        "value": 1147.5,
+        "ts": 1791438900.0
+      },
+      {
+        "asset_id": "S4_PIPELINE_C",
+        "metric": "receive_flow_bpd",
+        "value": 2960.4,
+        "ts": 1791438900.0
+      },
+      {
+        "asset_id": "S4_PUMP_C",
+        "metric": "discharge_psi",
+        "value": 1228.0,
+        "ts": 1791438900.0
+      },
+      {
+        "asset_id": "S4_PUMP_C",
+        "metric": "flow_bpd",
+        "value": 2958.4,
+        "ts": 1791438900.0
+      },
+      {
+        "asset_id": "S4_PUMP_C",
+        "metric": "status",
+        "value": 1.0,
+        "ts": 1791438900.0
+      },
+      {
+        "asset_id": "S4_TANK_C",
+        "metric": "level_pct",
+        "value": 69.19,
+        "ts": 1791438900.0
+      }
+    ],
+    "confirmed_unix": 1791440400.0,
+    "level_pct": 46.15,
+    "hours_to_limit": null,
+    "forecast_reason": "Field inspection; no shutdown countdown",
+    "revenue_per_hour": 3450.0,
+    "remaining_repair_hours": 0
+  },
+  {
+    "event_id": "S5_FACILITY_A-pump_degradation-1791242700",
+    "system_id": "S5",
+    "facility_id": "S5_FACILITY_A",
+    "asset_id": "S5_PUMP_A",
+    "category": "pump_degradation",
+    "status": "resolved",
+    "onset_unix": 1791242700.0,
+    "detection_unix": 1791242700.0,
+    "end_unix": 1791318300.0,
+    "provisional": false,
+    "confidence": 0.85,
+    "evidence": [
+      {
+        "asset_id": "S5_PIPELINE_A",
+        "metric": "pressure_psi",
+        "value": 1076.9,
+        "ts": 1791242700.0
+      },
+      {
+        "asset_id": "S5_PIPELINE_A",
+        "metric": "receive_flow_bpd",
+        "value": 2702.9,
+        "ts": 1791242700.0
+      },
+      {
+        "asset_id": "S5_PUMP_A",
+        "metric": "discharge_psi",
+        "value": 1147.7,
+        "ts": 1791242700.0
+      },
+      {
+        "asset_id": "S5_PUMP_A",
+        "metric": "flow_bpd",
+        "value": 2698.0,
+        "ts": 1791242700.0
+      },
+      {
+        "asset_id": "S5_PUMP_A",
+        "metric": "status",
+        "value": 1.0,
+        "ts": 1791242700.0
+      },
+      {
+        "asset_id": "S5_TANK_A",
+        "metric": "level_pct",
+        "value": 30.96,
+        "ts": 1791242700.0
+      }
+    ],
+    "confirmed_unix": 1791260700.0
+  },
+  {
+    "event_id": "S5_FACILITY_B-pipeline_leak-1791442200",
+    "system_id": "S5",
+    "facility_id": "S5_FACILITY_B",
+    "asset_id": "S5_PIPELINE_B",
+    "category": "pipeline_leak",
+    "status": "ongoing",
+    "onset_unix": 1791442200.0,
+    "detection_unix": 1791442200.0,
+    "end_unix": null,
+    "provisional": false,
+    "confidence": 0.85,
+    "evidence": [
+      {
+        "asset_id": "S5_PIPELINE_B",
+        "metric": "pressure_psi",
+        "value": 1051.4,
+        "ts": 1791442200.0
+      },
+      {
+        "asset_id": "S5_PIPELINE_B",
+        "metric": "receive_flow_bpd",
+        "value": 2496.3,
+        "ts": 1791442200.0
+      },
+      {
+        "asset_id": "S5_PUMP_B",
+        "metric": "discharge_psi",
+        "value": 1171.5,
+        "ts": 1791442200.0
+      },
+      {
+        "asset_id": "S5_PUMP_B",
+        "metric": "flow_bpd",
+        "value": 2575.4,
+        "ts": 1791442200.0
+      },
+      {
+        "asset_id": "S5_PUMP_B",
+        "metric": "status",
+        "value": 1.0,
+        "ts": 1791442200.0
+      },
+      {
+        "asset_id": "S5_TANK_B",
+        "metric": "level_pct",
+        "value": 67.35,
+        "ts": 1791442200.0
+      }
+    ],
+    "confirmed_unix": 1791445500.0,
+    "level_pct": 42.98,
+    "hours_to_limit": null,
+    "forecast_reason": "Field inspection; no shutdown countdown",
+    "revenue_per_hour": 2750.0,
+    "remaining_repair_hours": 0.833333333333333
+  }
+]

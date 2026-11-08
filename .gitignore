@@ -1,0 +1,17 @@
+.env
+!.env.example
+backend/.venv/
+**/__pycache__/
+.pytest_cache/
+*.egg-info/
+node_modules/
+**/node_modules/
+frontend/dist/
+frontend/test-results/
+frontend/playwright-report/
+data/vendor/
+data/imports/
+*.db
+*.db-wal
+*.db-shm
+.runtime/
