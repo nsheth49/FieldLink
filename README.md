@@ -48,31 +48,5 @@ Open http://localhost:5173. Health: http://127.0.0.1:8080/api/health . OpenAPI: 
 
 Choose the snapshot and Interactive scenario, then New run. Compare S2 plans. Report `S2_TRUCK_1 unavailable for 60 scenario minutes` in Conversations. Review v2, approve as supervisor, and acknowledge separately. All dispatches are simulated.
 
-## Validate
-
-```powershell
-backend/.venv/Scripts/python.exe -m pytest backend/tests -q
-npm --prefix frontend test
-npm --prefix frontend run build
-# Start API/worker/frontend first; this never sends external messages.
-$env:FIELDLINK_E2E_PASSWORD = Get-Content .runtime/e2e-password -Raw
-npm --prefix frontend run test:e2e
-```
-
-Playwright uses installed Edge by default; set FIELDLINK_BROWSER_CHANNEL=chromium if that browser is installed instead. Unit tests use temporary databases and mock HTTP transports. The evaluator in eval/ is isolated from runtime and is the only evaluation code that reads answer keys.
-
-Verified locally: 27 backend tests, 3 frontend tests, one full mock browser scenario including mobile overflow, production build, pip dependency check, and repeatable migration. The NVIDIA key, tool-result round trip and bounded adapter have also passed real synthetic checks. The build reports a large-bundle warning. Docker, Photon and Tiger checks remain pending.
-
-Put real keys in ignored root `.env`, never `.env.example`. Restart API and worker after changing configuration. Check missing configuration without displaying secrets:
-
-```powershell
-backend/.venv/Scripts/python.exe scripts/check_integrations.py
-# Explicit NVIDIA-only live diagnostic, using synthetic data and no messaging:
-backend/.venv/Scripts/python.exe scripts/check_integrations.py --live-nvidia --runtime-agent --output .runtime/provider-checks.json
-```
-
-Photon needs a Beta 2 project ID (`pho_prj_...`), scoped API key (`pho_sk_...`), sender ID, signing secret, verified conversation/role mappings, and a public HTTPS webhook. The separate `fieldlink/` Spectrum starter does not provide these Beta credentials. Tiger Cloud requires a TLS PostgreSQL DATABASE_URL; SQLite remains the development fallback.
-
-Plans report **least cost found**, with bounded minute-grid search. They are not proven globally optimal. Original telemetry is immutable; tools only read through the run cursor. Separate simulated traces represent proposed actions.
 
 Docker/Caddy assets under deploy/ target external PostgreSQL. Python 3.12/Linux, Tiger service and Vultr deployment need smoke tests. Full limitations and live-integration blockers are in docs/BUILD_STATUS.md.
